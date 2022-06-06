@@ -13,7 +13,7 @@ export default function Home() {
       <nav>
         <img
           className="logo"
-          src="../../../assets/logo.png"
+          src="/assets/logo.png"
           alt="logo bendita computação"
         />
         <ul className="pages">
@@ -50,10 +50,7 @@ export default function Home() {
           </p>
         </div>
         <div className="logo">
-          <img
-            src="../../../assets/imagem1.png"
-            alt="homem tocando no celular"
-          />
+          <img src="/assets/imagem1.png" alt="homem tocando no celular" />
         </div>
       </section>
 
@@ -63,7 +60,7 @@ export default function Home() {
           <a href="https://bit.ly/3zgxbYj">
             <img
               className="footer-img"
-              src="../../../assets/google-report.png"
+              src="/assets/google-report.png"
               alt="verificador de sites google"
             />
           </a>
