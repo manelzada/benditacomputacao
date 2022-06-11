@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   AiFillInstagram,
   AiFillLinkedin,
@@ -8,6 +9,15 @@ import {
 import "./styles.css";
 
 export default function Home() {
+  const [offsetY, setOffSetY] = useState(0);
+  const handleScroll = () => setOffSetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main>
       <nav>
@@ -32,10 +42,11 @@ export default function Home() {
         </ul>
         <button className="chat-button">Chat</button>
       </nav>
-
-      <div className="separator"></div>
-
-      <section>
+      <section
+        id="sec1"
+        className="section"
+        style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+      >
         <div className="content">
           <h1>Lorem ipsum</h1>
           <h1>dolor</h1>
@@ -49,14 +60,36 @@ export default function Home() {
             ante.
           </p>
         </div>
-        <div className="logo">
-          <img src="/assets/imagem1.png" alt="homem tocando no celular" />
-        </div>
+        <img
+          className="section-img"
+          src="/assets/imagem1.png"
+          alt="homem tocando no celular"
+        />
       </section>
 
-      <footer>
+      <section id="sec2" className="section">
+        <div className="content">
+          <h2>Lorem ipsum</h2>
+          <h2>dolor</h2>
+          <h2>it amet, consectetur</h2>
+          <p className="section-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            eu urna id purus viverra efficitur vehicula non justo. Curabitur
+            varius ex eu dictum dignissim. Nulla purus elit, tincidunt eget
+            fringilla sed, scelerisque vel odio. Nullam accumsan ac diam vel
+            bibendum. Maecenas vel pellentesque diam. Nam a urna lectus. Ut
+            ante.
+          </p>
+        </div>
+        <img
+          className="section-img"
+          src="/assets/imagem1.png"
+          alt="homem tocando no celular"
+        />
+      </section>
+
+      <footer id="footer">
         <div>
-          <p className="footer-p">Fazendo acontecer</p>
           <a href="https://bit.ly/3zgxbYj">
             <img
               className="footer-img"
