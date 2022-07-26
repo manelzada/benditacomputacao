@@ -1,8 +1,14 @@
 import "./styles.css";
 
+import { GiHamburgerMenu } from "react-icons/gi";
+
 export function Home() {
   return (
     <div className="home">
+      <nav>
+        <div></div>
+        <GiHamburgerMenu className="drawer" />
+      </nav>
       <main>
         <span className="title">Bendita
           <br />

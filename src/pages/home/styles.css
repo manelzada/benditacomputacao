@@ -1,8 +1,23 @@
+nav {
+  height: 20vh;
+  width: 100%;
+  background: #2B2628;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer {
+  margin-right: 5rem;
+  margin-top: 1rem;
+  font-size: 25px;
+  color: #CCCCCC;
+}
+
 main {
   display: flex;
   flex-direction: column;
   margin: auto;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background: #2B2628;
   vertical-align: middle;
