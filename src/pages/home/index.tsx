@@ -14,7 +14,8 @@ export function Home() {
         </span>
         <span className="contact">
           (77) 988289468 <br />
-          bendita@computacao.com.br
+
+          <a href="mailto:bendita@computacao.com.br">bendita@computacao.com.br</a>
         </span>
       </main>
     </div>

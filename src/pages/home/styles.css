@@ -12,6 +12,11 @@ main {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: #CCCCCC;
+}
+
 .title {
   position: absolute;
   top: 50%;
@@ -25,7 +30,7 @@ main {
 }
 
 .descricao, .contact {
-  line-height: 1rem
+  line-height: 1.5rem
 }
 
 .descricao {
