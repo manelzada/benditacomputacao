@@ -1,85 +1,62 @@
-import {
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillFacebook,
-  AiFillGithub,
-} from "react-icons/all";
+import { AiFillInstagram, AiFillLinkedin, AiFillFacebook, AiFillGithub } from 'react-icons/all';
 
-import "./styles.css";
+import { Button, Contact, Container, Content, Footer, Navbar, Separator } from './styles';
 
 export default function Home() {
   return (
-    <main>
-      <nav>
-        <img
-          className="logo"
-          src="/assets/logo.png"
-          alt="logo bendita computação"
-        />
+    <Container>
+      <Navbar>
+        <img className="logo" src="/assets/logo.png" alt="logo bendita computação" />
         <ul className="pages">
           <li>
-            <a href="">Serviços</a>
+            <a href="#services">Serviços</a>
           </li>
           <li>
-            <a href="">Sobre nós</a>
+            <a href="#aboutus">Sobre nós</a>
           </li>
           <li>
-            <a href="">Produtos</a>
+            <a href="#products">Produtos</a>
           </li>
           <li>
-            <a href="">Contato</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
-        <button className="chat-button">Chat</button>
-      </nav>
+        <Button>Chat</Button>
+      </Navbar>
 
-      <div className="separator"></div>
+      <Separator />
 
-      <section>
+      <Content>
         <div className="content">
           <h1>Lorem ipsum</h1>
           <h1>dolor</h1>
           <h1>it amet, consectetur</h1>
           <p className="section-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            eu urna id purus viverra efficitur vehicula non justo. Curabitur
-            varius ex eu dictum dignissim. Nulla purus elit, tincidunt eget
-            fringilla sed, scelerisque vel odio. Nullam accumsan ac diam vel
-            bibendum. Maecenas vel pellentesque diam. Nam a urna lectus. Ut
-            ante.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu urna id purus viverra efficitur
+            vehicula non justo. Curabitur varius ex eu dictum dignissim. Nulla purus elit, tincidunt eget fringilla sed,
+            scelerisque vel odio. Nullam accumsan ac diam vel bibendum. Maecenas vel pellentesque diam. Nam a urna
+            lectus. Ut ante.
           </p>
         </div>
         <div className="logo">
           <img src="/assets/imagem1.png" alt="homem tocando no celular" />
         </div>
-      </section>
+      </Content>
+      <Footer>
+        <button type="button" onClick={() => window.open('https://bit.ly/3zgxbYj')}>
+          <img className="footer-img" src="/assets/google-report.png" alt="verificador de sites google" />
+        </button>
+        <div className="Social">
+          <AiFillInstagram />
 
-      <footer>
-        <div>
-          <p className="footer-p">Fazendo acontecer</p>
-          <a href="https://bit.ly/3zgxbYj">
-            <img
-              className="footer-img"
-              src="/assets/google-report.png"
-              alt="verificador de sites google"
-            />
-          </a>
+          <AiFillLinkedin />
+
+          <AiFillFacebook />
+
+          <AiFillGithub />
         </div>
-        <div className="social">
-          <a href="">
-            <AiFillInstagram />
-          </a>
-          <a href="">
-            <AiFillLinkedin />
-          </a>
-          <a href="">
-            <AiFillFacebook />
-          </a>
-          <a href="">
-            <AiFillGithub />
-          </a>
-        </div>
-      </footer>
-    </main>
+      </Footer>
+      {/* <Contact /> */}
+    </Container>
   );
 }
